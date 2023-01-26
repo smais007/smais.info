@@ -1178,6 +1178,7 @@ body.dark-theme {
   .show-scroll{
     bottom: 5rem;
   }
+
   .projects__container{
     width: 800px;
   }
@@ -1238,7 +1239,4 @@ body.dark-theme {
       bottom: -1rem;
       right: -5rem;
     }
-
-
-
 }
