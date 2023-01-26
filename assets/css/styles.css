@@ -1178,6 +1178,9 @@ body.dark-theme {
   .show-scroll{
     bottom: 5rem;
   }
+  .projects__container{
+    width: 800px;
+  }
 }
 
 /* Change bg-header color */
