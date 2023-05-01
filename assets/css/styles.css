@@ -423,7 +423,7 @@ body.dark-theme {
 }
 
 .download-button:hover{
-  background-color: #0baefa; 
+  background-color: #0baefa; /* Green background */
 }
 
 
@@ -1271,3 +1271,8 @@ body.dark-theme {
       right: -5rem;
     }
 }
+
+
+
+
+
