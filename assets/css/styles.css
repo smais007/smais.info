@@ -408,6 +408,37 @@ body.dark-theme {
   font-weight: var(--font-semi-bold);
 }
 
+.download-button {
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  color: white;
+  padding: 12px 24px; /* Padding for button */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 163px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.download-button:hover{
+  background-color: #0baefa; /* Green background */
+}
+
+
+
+
+/* Media query for devices with a max width of 480px */
+@media screen and (max-width: 480px) {
+  .download-button {
+    padding: 8px 16px; /* Decrease padding for smaller screens */
+  }
+}
+
+
+
+
 
 /*=============== SKILLS ===============*/
 .skills__container{
@@ -588,7 +619,7 @@ body.dark-theme {
   margin: auto;
   z-index: -1;
   transition: opacity .6s;   
-  opacity: 0;
+  opacity: 1;
 }
 
 .services__card:hover i{
