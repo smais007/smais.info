@@ -433,6 +433,11 @@ body.dark-theme {
   }
 }
 
+@media screen and (max-width: 720px) {
+  .download-button {
+    margin: 4px 250px; /* Decrease padding for smaller screens */
+  }
+}
 /*=============== SKILLS ===============*/
 .skills__container{
  row-gap: 3.5rem;
