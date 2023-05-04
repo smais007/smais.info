@@ -433,6 +433,10 @@ body.dark-theme {
   }
 }
 
+@media screen and (max-width: 340px) {
+  .download-button{
+    margin-inline: 1rem;
+  }
 
 
 /*=============== SKILLS ===============*/
