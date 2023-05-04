@@ -303,6 +303,7 @@ body.dark-theme {
 .home__container{
   row-gap: 4rem;
   padding-top: 2rem;
+
 }
 
 .home__data{
@@ -433,11 +434,6 @@ body.dark-theme {
   }
 }
 
-@media screen and (max-width: 720px) {
-  .download-button {
-    margin: 4px 250px; /* Decrease padding for smaller screens */
-  }
-}
 /*=============== SKILLS ===============*/
 .skills__container{
  row-gap: 3.5rem;
@@ -1268,4 +1264,77 @@ body.dark-theme {
       bottom: -1rem;
       right: -5rem;
     }
+}
+
+
+/*Popup Windoes*/
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-button i {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.close-button:hover i {
+  color: #f44336;
+  
+}
+
+.dialog-content {
+  margin-top: 20px;
+}
+
+.dialog-content h2{
+  text-align: center;
+  font-family: var(--container-color);
+  padding-bottom: 8px;
+}
+
+.dialog-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.dialog-content h3{
+  text-align: center;
+  font-family: var(--container-color);
+  padding-top: 1rem;
+}
+
+.dialog-content p{
+  text-align: center;
+  font-family: var(--container-color);
+  padding-top: .5rem;
+}
+
+.dialog-content ul{
+  font-family: var(--container-color);
+  padding-top: 1rem;
+  color: #292727;
 }
