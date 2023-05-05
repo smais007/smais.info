@@ -55,7 +55,7 @@ var swiperTestimonial = new Swiper(".testimonial__container", {
 });
 
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById("contact-form"),
+/*const contactForm = document.getElementById("contact-form"),
   contactName = document.getElementById("contact-name"),
   contactEmail = document.getElementById("contact-email"),
   contactProject = document.getElementById("contact-project"),
@@ -108,6 +108,37 @@ const sendEmail = (e) => {
   }
 };
 contactForm.addEventListener("submit", sendEmail);
+*/
+
+// Select the form element
+const form = document.getElementById('contact-form');
+
+// Add an event listener for form submission
+form.addEventListener('submit', (event) => {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the form data
+  const name = form.elements['user_name'].value;
+  const email = form.elements['user_email'].value;
+  const question = form.elements['user_project'].value;
+
+  // Send the email using EmailJS
+  emailjs.send('service_qee7ukt', 'template_vjp21l8', {
+    from_name: name,
+    from_email: email,
+    message: question
+  }).then((response) => {
+    // Display a success message to the user
+    const message = document.getElementById('contact-message');
+    message.textContent = 'Your message was sent successfully!';
+  }, (error) => {
+    // Display an error message to the user
+    const message = document.getElementById('contact-message');
+    message.textContent = 'There was an error sending your message. Please try again later.';
+  });
+});
+
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll("section[id]");
@@ -144,32 +175,42 @@ window.addEventListener("scroll", scrollUp);
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "ri-sun-line";
+const popupContainer = document.getElementById("popup-container");
 
-//Previous selectd topic
-const selectdTheme = localStorage.getItem("selected-theme");
-const selectdIcon = localStorage.getItem("selected-icon");
+// Check if there's a selected theme and icon
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
 
+// Get the current theme and icon
 const getCurrentTheme = () =>
-  document.body.classList(darkTheme) ? "dark" : "light";
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
-  document.body.classList(iconTheme) ? "ri-moon-line" : "ri-sun-line";
+  document.body.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
 
-if (selectdTheme) {
-  document.body.classList[selectdTheme === "dark" ? "add" : "remove"](
+// Set the theme and icon on page load
+if (selectedTheme) {
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
-  themeButton.classList[selectdIcon === "ri-moon-line" ? "add" : "remove"](
+  themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
     iconTheme
   );
 }
 
+// Toggle the theme and icon on button click
 themeButton.addEventListener("click", () => {
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
 
+  // Toggle the dark mode for the popup window
+  popupContainer.classList.toggle("dark-popup");
+
+  // Save the selected theme and icon
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () => {

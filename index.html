@@ -130,15 +130,15 @@
 
                     </ul>
 
-                </div>
-
-                <div class="cv">
-                    <a href="assets/img/CV of Smais.pdf" download>
-                        <button class="download-button">Download CV <span>&#x2193;</span> </button>
-                    </a>
-
+                    <div class="cv">
+                        <a href="assets/img/CV of Smais.pdf" download>
+                            <button class="download-button">Download CV <span>&#x2193;</span> </button>
+                        </a>
+                    </div>
 
                 </div>
+
+
 
                 <!--==================== HOME  INFO 1====================-->
                 <div class="home__info">
@@ -463,29 +463,38 @@
                                 <span class="projects__subtitle">Dara</span>
                                 <h1 class="projects__title">E-Commerch</h1>
 
-                                <a href="" class="projects__button view-demo-link" data-project-name="Project Name 1" data-project-description="Description of project 1" data-dialog-target="dialog-1">
+                                <a href="" class="projects__button view-demo-link" data-project-name="Project Name 1"
+                                    data-project-description="Description of project 1" data-dialog-target="dialog-1">
                                     Viwe Demo <i class="ri-arrow-right-line"></i>
                                 </a>
                             </div>
-                            <dialog id="dialog-1" class="dialog">
-                                <div class="dialog-content">
-                                    <h2>Project Name 1</h2>
-                                  <img src="assets/img/project1.jpg" alt="Project Name">
-                                  <h3>Description</h3>
-                                  <p>In this modified code, each image link has a unique data-dialog-target attribute that corresponds to the id of the dialog box that contains the image. When the user clicks on a link, the corresponding dialog box is opened. Each dialog box has its own close button that closes the dialog box when clicked. The CSS styles for the dialog boxes are the same as before.</p>
-                                  <div class="general-info">
-                                    <ul>
-                                      <li>Created date - <span>4 Dec 2018</span></li>
-                                      <li>Techonology - <span>4 Dec 2018</span></li>
-                                      <li>Type - <span>4 Dec 2018</span></li>
-                                      <li>Live Demo - <span> <a href="#" target="_blank">www.domain.com</a></span></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                <button class="close-button">
-                                    <i class="ri-close-line"></i>
-                                </button>
-                              </dialog>
+                            <div id="popup-container">
+                                <dialog id="dialog-1" class="dialog">
+                                    <div class="dialog-content">
+                                        <h2>Project Name 1</h2>
+                                        <img src="assets/img/project1.jpg" alt="Project Name">
+                                        <h3>Description</h3>
+                                        <p>In this modified code, each image link has a unique data-dialog-target
+                                            attribute that corresponds to the id of the dialog box that contains the
+                                            image. When the user clicks on a link, the corresponding dialog box is
+                                            opened. Each dialog box has its own close button that closes the dialog box
+                                            when clicked. The CSS styles for the dialog boxes are the same as before.
+                                        </p>
+                                        <div class="general-info">
+                                            <ul>
+                                                <li>Created date - <span>4 Dec 2018</span></li>
+                                                <li>Techonology - <span>4 Dec 2018</span></li>
+                                                <li>Type - <span>4 Dec 2018</span></li>
+                                                <li>Live Demo - <span> <a href="#"
+                                                            target="_blank">www.domain.com</a></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="close-button">
+                                        <i class="ri-close-line"></i>
+                                    </button>
+                                </dialog>
+                            </div>
                         </div>
 
                         <!--==================== PROJECTS 2====================-->
@@ -496,7 +505,8 @@
                                 <span class="projects__subtitle">Web</span>
                                 <h1 class="projects__title">Moder Websit</h1>
 
-                                <a href="" class="projects__button view-demo-link" data-project-name="Project Name 2" data-project-description="Description of project 2">
+                                <a href="" class="projects__button view-demo-link" data-project-name="Project Name 2"
+                                    data-project-description="Description of project 2">
                                     Viwe Demo <i class="ri-arrow-right-line"></i>
                                 </a>
                             </div>
@@ -509,10 +519,11 @@
                                 <span class="projects__subtitle">Bookish</span>
                                 <h1 class="projects__title">Prototype</h1>
 
-                                <a href="" class="projects__button view-demo-link" data-project-name="Project Name 3" data-project-description="Description of project 3">
+                                <a href="" class="projects__button view-demo-link" data-project-name="Project Name 3"
+                                    data-project-description="Description of project 3">
                                     Viwe Demo <i class="ri-arrow-right-line"></i>
                                 </a>
-                                
+
                             </div>
                         </div>
                         <!--==================== PROJECTS 4 ====================-->
@@ -752,6 +763,14 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("UNB8kpGuVLAVVRVlJ");
+        })();
+    </script>
+
 </body>
 
 </html>

@@ -1272,6 +1272,7 @@ body.dark-theme {
   position: fixed;
   top: 50%;
   left: 50%;
+  right: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 600px;
@@ -1281,6 +1282,8 @@ body.dark-theme {
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   background-color: #fff;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow: hidden;
 }
 
 .close-button {
@@ -1338,3 +1341,6 @@ body.dark-theme {
   padding-top: 1rem;
   color: #292727;
 }
+
+
+
