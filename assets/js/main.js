@@ -124,7 +124,7 @@ form.addEventListener('submit', (event) => {
   const question = form.elements['user_project'].value;
 
   // Send the email using EmailJS
-  emailjs.send('service_qee7ukt', 'template_vjp21l8', {
+  emailjs.send('service_qee7ukt', 'template_vjp21l8XXXXX', {
     from_name: name,
     from_email: email,
     message: question
